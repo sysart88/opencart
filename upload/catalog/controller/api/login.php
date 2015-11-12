@@ -49,7 +49,7 @@ class ControllerApiLogin extends Controller {
 			$this->response->addHeader('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 		}
 
-		$this->response->addHeader('Content-Type: application/json');
-		$this->response->setOutput(json_encode($json));
+		$this->response->addHeader('Content-Type: application/json; charset=utf-8');
+		$this->response->setOutput(json_encode($json,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 	}
 }
