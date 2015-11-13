@@ -50,6 +50,6 @@ class ControllerApiLogin extends Controller {
 		}
 
 		$this->response->addHeader('Content-Type: application/json');
-		$this->response->setOutput(json_encode($json));
+		$this->response->setOutput(json_encode($json,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT));
 	}
 }
